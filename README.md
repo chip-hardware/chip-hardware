@@ -16,4 +16,4 @@ Clean HTML site-maker & audio hardware pipeline engineer. Transforming raw code 
 
 * [Patchstorage](https://patchstorage.com/author/chipc/) — Modular patches and toolsets.
 * [SoundCloud](https://soundcloud.com/chaosprancer/sets/vcv-patcher-patch-demos) — Audio tracks and sound experiments.
-* Email: druilsenctr@gmail.com
+* Email: runesstaves@gmail.com
