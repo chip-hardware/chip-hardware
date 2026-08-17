@@ -1,4 +1,4 @@
-# chip-hardware 👋
+# chip-hardware ⚡︎
 
 Crafting ultra-fast (CrazySpeed) HTML5 landing pages for HoReCa & local businesses. Audio software & pipeline engineer. Transforming code into experiences.
 
