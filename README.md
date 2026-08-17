@@ -1,6 +1,6 @@
 # chip-hardware
 
-Clean HTML site-maker & audio hardware pipeline engineer. Transforming raw code into optimized digital experiences.
+⚡️ Crafting ultra-fast (CrazySpeed) HTML5 landing pages for HoReCa & local businesses. Audio software & pipeline engineer. Transforming code into experiences.
 
 ---
 
