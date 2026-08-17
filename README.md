@@ -22,8 +22,9 @@ Deeply passionate about sound synthesis, modular workflows, and time-series data
 ---
 
 ### 🔗 Links & Contacts
+* **YouTube:** [Generative jams, live coding & modular soundscapes](https://www.youtube.com/@chipcherny)
 * **Patchstorage:** [Modular patches and toolsets](https://patchstorage.com/author/chipc/)
 * **SoundCloud:** [Audio tracks and sound experiments](https://soundcloud.com/chaosprancer/tracks)
-* **Youtube:** (https://www.youtube.com/@chipcherny)
 * **Email:** [runesstaves@gmail.com](mailto:runesstaves@gmail.com)
+
 
