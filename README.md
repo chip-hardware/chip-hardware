@@ -1,10 +1,10 @@
 # chip-hardware 👋
 
-⚡️ Crafting ultra-fast (CrazySpeed) HTML5 landing pages for HoReCa & local businesses. Audio software & pipeline engineer. Transforming code into experiences.
+Crafting ultra-fast (CrazySpeed) HTML5 landing pages for HoReCa & local businesses. Audio software & pipeline engineer. Transforming code into experiences.
 
 ---
 
-### ⚡️ Web Development (CrazySpeed Static Sites)
+### Web Development (CrazySpeed Static Sites)
 I build modern, lightweight, and blazing-fast single-page websites tailored for **HoReCa (Hotels, Restaurants, Cafes)** and local brands. 
 * **Zero Infrastructure Costs:** Free production-ready deployment via GitHub Pages.
 * **Maximum Performance:** 100/100 Lighthouse scores, zero heavy frameworks, seamless mobile UX.
