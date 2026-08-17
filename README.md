@@ -13,11 +13,11 @@ I build modern, lightweight, and blazing-fast single-page websites tailored for 
 
 ---
 
-### 🎛 Audio & Hardware Engineering
+### Audio & Hardware Engineering
 Deeply passionate about sound synthesis, modular workflows, and time-series data analysis.
-* 🎹 **[chord-matrix-tools](https://github.com/chip-hardware/chord-matrix-tools)** — Python toolkit to automate harmonic progressions based on "The Chord Matrix" book. Generates and exports MIDI sequences instantly.
-* 🎚 **[vcv-patcher](https://github.com/chip-hardware/vcv-patcher)** — Tools and utilities for VCV Rack 2.6+ environment.
-* 📈 **[ts-transformer-forecast](https://github.com/chip-hardware/ts-transformer-forecast)** — Financial time series forecasting system leveraging Transformer architectures.
+*  **[chord-matrix-tools](https://github.com/chip-hardware/chord-matrix-tools)** — Python toolkit to automate harmonic progressions based on "The Chord Matrix" book. Generates and exports MIDI sequences instantly.
+*  **[vcv-patcher](https://github.com/chip-hardware/vcv-patcher)** — Tools and utilities for VCV Rack 2.6+ environment.
+*  **[ts-transformer-forecast](https://github.com/chip-hardware/ts-transformer-forecast)** — Financial time series forecasting system leveraging Transformer architectures.
 
 ---
 
