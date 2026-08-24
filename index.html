@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chip(c) | Code Optimization, Web Design & Quantitative Systems</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --text-color: #e2e8f0;
+            --accent-green: #2ecc71;
+            --accent-blue: #3498db;
+            --card-bg: #121216;
+            --border-color: #1f1f2e;
+        }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-main h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .header-main h1 span {
+            color: var(--accent-green);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .lang-switcher {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 650;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .lang-switcher:hover {
+            border-color: var(--accent-green);
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 35px 0 15px 0;
+            color: #f1c40f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #3b3b4f;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+            color: #fff;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .badge-green { background-color: rgba(46, 204, 113, 0.15); color: var(--accent-green); }
+        .badge-blue { background-color: rgba(52, 152, 219, 0.15); color: var(--accent-blue); }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin: 0 0 15px 0;
+        }
+
+        .bullet-list {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .bullet-list li {
+            margin-bottom: 6px;
+        }
+
+        .project-link {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 15px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Language visibility */
+        [lang="it"] {
+            display: none;
+        }
+
+        .language-visible[lang="it"] {
+            display: block;
+        }
+
+        .language-visible[lang="en"] {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            header {
+                flex-direction: column;
+            }
+            
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-main">
+                <h1>chip<span>(c)</span></h1>
+                <p class="tagline">Audio Software & Pipeline Engineer | Quantitative Systems Developer</p>
+            </div>
+            <button class="lang-switcher" onclick="toggleLanguage()" id="langBtn" aria-label="Toggle language">IT</button>
+        </header>
+
+        <main>
+            <!-- ================= ENGLISH VERSION ================= -->
+            <div id="en-content" lang="en">
+                <h2>1. Ultra-Fast Web Development (CrazySpeed Sites)</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">High-Performance Static Web Infrastructure</h3>
+                        <span class="badge badge-green">100/100 Lighthouse</span>
+                    </div>
+                    <p class="card-desc">Engineering uncompromisingly fast, lightweight static landing pages for HoReCa and local brands. Complete elimination of heavy frameworks in favor of clean, optimized code with zero infrastructure costs.</p>
+                    <ul class="bullet-list">
+                        <li><strong>Maximum Conversion:</strong> Blazing-fast response times on mobile devices ensuring total user retention.</li>
+                        <li><strong>Neapolis Cafe Case Study:</strong> A modern single-page showcase tailored for Neapolis Cafe in Mykonos Town. Built with pure HTML5/CSS3, featuring an adaptive UX and zero external dependencies.</li>
+                    </ul>
+                    <a href="#" class="project-link" target="_blank">→ View neapolis-cafe repository</a>
+                </div>
+
+                <h2>2. Forex & Algorithmic Trading Systems</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Quantitative Models & Proprietary Microstructure Logistics</h3>
+                        <span class="badge badge-blue">Live Testing</span>
+                    </div>
+                    <p class="card-desc">Architecting, backtesting, and deploying fully automated systems centered on tracking institutional price imbalances. A culmination of over a decade of market observations transformed into a rule-based execution engine currently undergoing live stress-testing.</p>
+                    <ul class="bullet-list">
+                        <li><strong>Market Noise Filtering:</strong> Advanced structural auditing of price action data designed to isolate and discard standard sideways consolidation, isolating only true liquidity expansion cycles.</li>
+                        <li><strong>Cloud-Native Node Terminal:</strong> High-efficiency orchestration via automated cloud tasks (GitHub Actions), executing lightning-fast state scans and running entirely independent of local hardware.</li>
+                        <li><strong>Precision Tactical Delivery:</strong> Algorithmic structural mapping coupled with direct, real-time notification arrays (Entry / Stop / Target configurations) instantly dispatched to private digital workspaces.</li>
+                    </ul>
+                    <a href="#" class="project-link" target="_blank">→ Backtesting Engine</a>
+                    <a href="#" class="project-link" target="_blank">→ Equilibrium Framework</a>
+                </div>
+            </div>
+
+            <!-- ================= ITALIAN VERSION ================= -->
+            <div id="it-content" lang="it">
+                <h2>1. Sviluppo Web Ultra-Rapido (Siti CrazySpeed)</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Infrastruttura Web Statica ad Alte Prestazioni</h3>
+                        <span class="badge badge-green">100/100 Lighthouse</span>
+                    </div>
+                    <p class="card-desc">Sviluppo di landing page statiche eccezionalmente veloci e leggere per il settore HoReCa e marchi locali. Eliminazione totale di framework pesanti a favore di un codice pulito e ottimizzato, con zero costi di infrastruttura.</p>
+                    <ul class="bullet-list">
+                        <li><strong>Massima Conversione:</strong> Tempi di caricamento istantanei su dispositivi mobili per garantire la massima fidelizzazione degli utenti.</li>
+                        <li><strong>Caso di Studio Neapolis Cafe:</strong> Una vetrina monopagina moderna realizzata su misura per il Neapolis Cafe a Mykonos Town. Sviluppato in puro HTML5/CSS3, con UX adattiva e zero dipendenze esterne.</li>
+                    </ul>
+                    <a href="#" class="project-link" target="_blank">→ Vedi il repository neapolis-cafe</a>
+                </div>
+
+                <h2>2. Forex & Sistemi di Trading Algoritmico</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Modelli Quantitativi e Logistica Proprietaria delle Microstrutture</h3>
+                        <span class="badge badge-blue">Test Live</span>
+                    </div>
+                    <p class="card-desc">Progettazione, backtesting e implementazione di sistemi completamente automatizzati focalizzati sul tracciamento degli sbilanciamenti di prezzo istituzionali. Il culmine di oltre un decennio di osservazioni di mercato trasformato in un motore di esecuzione algoritmico attualmente in fase di stress-test dal vivo.</p>
+                    <ul class="bullet-list">
+                        <li><strong>Filtro del Rumore di Mercato:</strong> Audit strutturale avanzato dei dati sui movimenti di prezzo per isolare e scartare le fasi di consolidamento laterale, intercettando esclusivamente i reali cicli di espansione della liquidità.</li>
+                        <li><strong>Terminale Cloud-Native:</strong> Orchestrazione ad alta efficienza tramite attività cloud automatizzate (GitHub Actions), che esegue scansioni di stato rapidissime operando in totale autonomia dall'hardware locale.</li>
+                        <li><strong>Distribuzione Tattica di Precisione:</strong> Mappatura strutturale algoritmica integrata con notifiche istantanee in tempo reale (configurazioni di Ingresso / Stop / Target) inviate direttamente a spazi di lavoro digitali privati.</li>
+                    </ul>
+                    <a href="#" class="project-link" target="_blank">→ Motore di Backtesting</a>
+                    <a href="#" class="project-link" target="_blank">→ Framework di Equilibrio</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 chip-hardware. Transforming raw code into secure digital ecosystems.</p>
+            <p>Email: <a href="mailto:runesstaves@gmail.com">runesstaves@gmail.com</a> | GitHub: <a href="https://github.com/chip-hardware" target="_blank">@chip-hardware</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('en-content').style.display = 'block';
+        document.getElementById('it-content').style.display = 'none';
+
+        function toggleLanguage() {
+            const enContent = document.getElementById('en-content');
+            const itContent = document.getElementById('it-content');
+            const langBtn = document.getElementById('langBtn');
+
+            if (enContent.style.display === 'none') {
+                enContent.style.display = 'block';
+                itContent.style.display = 'none';
+                langBtn.textContent = 'IT';
+                document.documentElement.lang = 'en';
+            } else {
+                enContent.style.display = 'none';
+                itContent.style.display = 'block';
+                langBtn.textContent = 'EN';
+                document.documentElement.lang = 'it';
+            }
+        }
+    </script>
+
+
+</body>
+</html>
