@@ -16,7 +16,7 @@ I build modern, lightweight, and blazing-fast single-page websites tailored for 
 ### Forex & Quantitative Trading 📊
 Advanced algorithmic trading systems, backtesting frameworks, and market microstructure analysis for foreign exchange markets.
 
-* 📈 **[post-expansion-equilibrium](https://github.com/chip-hardware/post-expansion-equilibrium)** — Post-expansion equilibrium detection and analysis for FX markets. Identifies key market structure shifts and mean-reversion opportunities.
+- 📈 **[post-expansion-equilibrium](https://github.com/chip-hardware/post-expansion-equilibrium)** — Algorithmic tracking of institutional price imbalances and mean-reversion anomalies. Supported by a cloud-native terminal node dispatching live telemetry directly to the **[Shark Live Radar](https://t.me/shark_radar)** feed.
 * 🔄 **[forex-imbalance-backtester](https://github.com/chip-hardware/forex-imbalance-backtester)** — High-performance backtesting engine for order flow imbalance strategies in forex. Realistic spread, slippage, and commission modeling.
 * 🤖 **[ts-transformer-forecast](https://github.com/chip-hardware/ts-transformer-forecast)** — Financial time series forecasting system leveraging Transformer architectures for price prediction and regime detection.
 
