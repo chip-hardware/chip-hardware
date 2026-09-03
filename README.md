@@ -26,6 +26,7 @@ Advanced algorithmic trading systems, backtesting frameworks, and market microst
 Deeply passionate about sound synthesis, modular workflows, and time-series data analysis.
 *  **[chord-matrix-tools](https://github.com/chip-hardware/chord-matrix-tools)** — Python toolkit to automate harmonic progressions based on "The Chord Matrix" book. Generates and exports MIDI sequences instantly.
 *  **[vcv-patcher](https://github.com/chip-hardware/vcv-patcher)** — Tools and utilities for VCV Rack 2.6+ environment.
+*  **[industrial-patch-generator](https://github.com/chip-hardware/industrial-patch-generator)** — Randomised patch generator for VCV Rack. Builds complex industrial structures from `concept.txt` chains with automatic routing and master FX section. Great for beginners and rapid prototyping.
 
 ---
 
