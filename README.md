@@ -31,6 +31,6 @@ Deeply passionate about sound synthesis, modular workflows, and time-series data
 ---
 
 ### 🔗 Links & Contacts
-* **Chord-Matrix:** [Generate.Harmonize.Create](https://chord-matrix.onrender.com)
+* **Chord-Matrix:** [Generate.Harmonize.Create](https://chord-matrix.vercel.app/)
 * **Patchstorage:** [Modular patches and toolsets](https://patchstorage.com/author/chipc/)
 * **Email:** [runesstaves@gmail.com](mailto:runesstaves@gmail.com)
