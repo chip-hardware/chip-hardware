@@ -1,6 +1,5 @@
 ---
 # chip-hardware ⚡︎
----
 ### Live Projects
 * **[chord-matrix](https://chord-matrix.vercel.app/)** — A real chord progression. Without music theory. Generates harmonic sequences from a 48-key / 515-chord matrix, with unlimited generations and MIDI export on Pro.
 * **[the-milner-fabian-conspiracy](https://the-milner-fabian-conspiracy.vercel.app/)** — An interactive reader for Ioan Ratiu's research: navigating the web of events, organizations, and key figures behind modern history, chapter by chapter.
