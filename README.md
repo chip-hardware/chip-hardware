@@ -1,5 +1,5 @@
+---
 # chip-hardware ⚡︎
-Crafting ultra-fast (CrazySpeed) HTML5 landing pages for HoReCa & local businesses. Audio software & pipeline engineer. Transforming code into experiences.
 ---
 ### Live Projects
 * **[chord-matrix](https://chord-matrix.vercel.app/)** — A real chord progression. Without music theory. Generates harmonic sequences from a 48-key / 515-chord matrix, with unlimited generations and MIDI export on Pro.
