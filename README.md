@@ -1,4 +1,3 @@
-
 # chip-hardware ⚡︎
 ---
 ### Live Projects
@@ -14,7 +13,7 @@ Modern, lightweight, blazing-fast single-page sites for **HoReCa (Hotels, Restau
 * **Maximum Performance:** 100/100 Lighthouse, no heavy frameworks, seamless mobile UX.
 * **[neapolis-cafe](https://github.com/chip-hardware/neapolis-cafe)** — High-performance site for Neapolis Cafe in Mykonos Town. Fully WCAG 2.1 compliant, multilingual, zero external dependencies.
 ---
-### Forex & Quantitative Trading
+### Exchange & Quantitative Trading
 * **[post-expansion-equilibrium](https://github.com/chip-hardware/post-expansion-equilibrium)** — Algorithmic tracking of institutional price imbalances and mean-reversion anomalies, with a cloud-native terminal node feeding the Shark Live Radar.
 * **[forex-imbalance-backtester](https://github.com/chip-hardware/forex-imbalance-backtester)** — High-performance backtesting engine for order flow imbalance strategies. Realistic spread, slippage, and commission modeling.
 * **[ts-transformer-forecast](https://github.com/chip-hardware/ts-transformer-forecast)** — Financial time series forecasting using Transformer architectures for price prediction and regime detection.
